@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views, and they are tabs-->
+    <!-- We need to set "toolbar-through" class on it to keep space for our tab bar-->
+    <div class="views tabs toolbar-through">
+      <!-- Your first view, it is also a .tab and should have "active" class to make it visible by default-->
+      <div id="view-1" class="view view-main tab active">
+        <!-- Pages-->
+        <div class="pages">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index-1" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block-title">Welcome to SGGS Bus Tracer App</div>
+              <div class="content-block">
+<!------------------------------Main Page Start___________________________________-----------_________________________-------------------------->          
+<br /><h3>This App is design for SGGS IE&T, Nanded only others are prohibited to use.</h3><br />
+<h3><User Guide/h3>
+<h4>
+Switch on GPS and Data Pack from Setting >> Location >> Wireless/ Mobile Network/ A-GPS Enable it.<br />
+Click on Login tab below >> Select which bus you want to track >> Set auto update time >> and dont forgot to log out otherwise bus will be remains visible on map<br />
+</h4><br />
+<h3>What to do if Loacation is not updating</h3>
+<h4><br />
+1. turn on and off and on your Data connection<br />
+2. turn on and off and on your GPS connection<br />
+3. turn on and off and on your Setting>>Location>> on-off-on services<br />
+4. Restart the App<br />
+5. Restart your Device<br />
+6. if still not happening then please report the error to the developers.<br />
+</h4>
+
+
+
+
+
+
+
+
+
+
+<!------------------------------Main Page END___________________________________------_________________________------------------------------->
+
+		  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Second view (for second wrap)-->
+      <div id="view-2" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Second View</div>
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-2" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                
+              </div>
+              <div class="list-block">
+                
+              </div>
+              <div class="content-block">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Tabbar-->
+      <div class="toolbar tabbar tabbar-labels">
+        <div class="toolbar-inner"><a href="login.html" class="tab-link"><i class="icon tabbar-demo-icon-2"></i><span class="tabbar-label">Start Bus Tracking</span></a></div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>

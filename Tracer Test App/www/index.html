@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <title>SGGS BUS TRACKING</title>
+    </head>
+    <body>
+    <h1 id = "op" align = "left"><i>SGGS बस शोधक अनुप्रयोग मध्ये आपले स्वागत आहे</i></h1>
+    <!--
+   Start Updating on Server: <input type="checkbox" id="myCheck">
+   Start Addressing Mode: <input type="checkbox" id="addmode">-->
+   <h2>लॉग-इन फॉर्म</h2>
+<!----------- http://sharedddnd.uphero.com/bustrack/login.php ----->
+
+<form method = "POST">
+बस निवडा: &nbsp &nbsp <select name="bus" id = "bus">
+<OPTION VALUE="0" SELECTED>0</OPTION>
+
+<OPTION VALUE="rn1">rn1</OPTION>
+<option value="an1">an1</option>
+<option value="cidco1">cidco1</option>
+<option value="mondha1">mondha1</option>
+
+<option value="rn2">rn2</option>
+<option value="an2">an2</option>
+<option value="cidco2">cidco2</option>
+<option value="mondha2">mondha2</option>
+
+<option value="rn3">rn3</option>
+<option value="an3">an3</option>
+<option value="cidco3">cidco3</option>
+<option value="mondha3">mondha3</option>
+
+<option value="rn4">rn4</option>
+<option value="an4">an4</option>
+<option value="cidco4">cidco4</option>
+<option value="mondha4">mondha4</option>
+
+<option value="rn5">rn5</option>
+<option value="an5">an5</option>
+<option value="cidco5">cidco5</option>
+<option value="mondha5">mondha5</option>
+
+<option value="rn6">rn6</option>
+<option value="an6">an6</option>
+<option value="cidco6">cidco6</option>
+<option value="mondha6">mondha6</option>
+
+<option value="rn7">rn7</option>
+<option value="an7">an7</option>
+<option value="cidco7">cidco7</option>
+<option value="mondha7">mondha7</option>
+</select><br />
+वापरकर्तानाव: <input type = "text" name = "username" id = "username" value="0"><br />
+पासवर्ड:  &nbsp &nbsp  &nbsp &nbsp <input type = "password" name = "password" id = "password"><br />
+<a href = 'login.html'><button onClick = "update()" id = "login">जमा करा</button></a>
+<h1 align = "left" id = "log"></h1>
+<!--<a href = "login.html"><p id = "date1">Here</p></a>-->
+</form><hr />
+	
+    <div align = "left">   
+
+				    <script>
+					if(localStorage.getItem('PASSWORD')=='RAHUL'){
+					document.getElementById("log").innerHTML="आपण आधीच लॉग इन आहेत "+localStorage.getItem('BUS')+" बस साठी<br /><a href = 'main.html'>पुढे जाण्यासाठी येथे क्लिक करा</a>"+"<br /><a href = 'logout.html'><p style = 'color:red'> किंवा लॉग out करण्यासाठी येथे क्लिक करा</p></a>"
+					}
+					var username;
+					var password;
+					var bus;
+				   function update(){
+				    username = document.getElementById("username").value;
+					password = document.getElementById("password").value;
+					bus = document.getElementById("bus").value;
+					//alert();
+					//window.location.href = file:///android_asset/www/index.html
+					//sendD(bus,username,password);					
+
+				   if(bus != 0){
+				   if(username != 0){
+					localStorage.setItem("BUS", bus);
+					localStorage.setItem("USERNAME", username);
+					localStorage.setItem("PASSWORD", password);
+					//alert("Loging in for "+localStorage.getItem('BUS'));
+					document.getElementById('gayab').innerHTML = "<a href = 'login.html'>तारण करावे</a>";
+					//window.location.assign("login.html");
+								//window.location.href = "login.html";								
+						}
+						else{
+						alert("कृपया वापरकर्तानाव निवडा");
+						}
+						}
+						else{
+						alert("कृपया एक बस निवडा");
+						}
+						
+						
+						}
+						function sendD(bus,username,password){
+						alert("INSend"+arguments[0]+arguments[1]+arguments[2]);
+													$.post("http://softysolutions.in/bustrack/login.php",
+														{
+														  bus: arguments[0],
+														  username: arguments[1],
+														  password: arguments[1]						  
+														},
+														function(data,status){
+														alert(data);
+														document.getElementById('date1').innerHTML = "Data: "+data;
+														});
+						}
+				    </script>
+				    <div id="dvMap" style="width: 100%; height: 100%; align: center">
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    </body>
+</html>

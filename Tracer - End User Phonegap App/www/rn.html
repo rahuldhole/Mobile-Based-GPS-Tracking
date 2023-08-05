@@ -1,0 +1,49 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+    <div class="center sliding">Ramanand Nagar</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="about" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block">
+        <div class="content-block-inner">
+<!--Start-->
+<br />
+<div align = "center">
+							<script>
+						  function rn(){
+						  //alert("Home");
+						  window.location("bus.html");
+						  }
+						  </script>
+						   
+						  <script>
+						  function home(){
+						  //alert("Home");
+						  window.location.assign("bus.html");
+						  }
+						  </script>
+<button style = "background:white; border:0px" onClick = "rn()"><a href = "bus.html"><img src = "GoogleMap.gif" height = "25%" width = "30%"></a></button>
+<br /><div align = "center"><a href = "bus.html"><button onClick = "home()" style = "background:white; border:0px">Google Map</button></a></div><br />
+<button style = "background:white; border:0px"><img src = "MetroMap.gif" height = "25%" width = "45%"></button>
+<br />Metro Map<br />
+<button style = "background:white; border:0px"><img src = "TimeTable.gif" height = "25%" width = "45%"></button>
+<br />Time Table<br />
+</div>
+
+<!--End-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

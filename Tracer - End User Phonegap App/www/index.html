@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>SGGS</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="dist/css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+	<link rel="stylesheet" href="css/framework7.3dpanels.min.css">
+	<link rel="stylesheet" href="css/framework7.3dpanels.css">
+	<link rel="stylesheet" href="animate.min.css">
+	<script type="text/javascript" src="js/GALocalStorage.js"></script>
+	<script>
+</script>
+  </head>
+    <style>
+  #ex2{
+  //-webkit-animation-duration: 5s;
+  //-webkit-animation-delay: 5s;
+  -webkit-animation-iteration-count: one;
+  }
+  #t{
+    background-image: url("map.gif");
+    //background-repeat: repeat-y;
+	background-repeat: no-repeat;
+    background-position: center;
+}
+#sggs{
+   animation-duration:7s;
+  -vendor-animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+  animation-delay: 2s;
+  -vendor-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  //-webkit-animation-iteration-count: one;
+  }
+  #pro{
+  animation-duration:7s;
+    -vendor-animation-duration: 5s;
+    -webkit-animation-duration: 5s;
+  //-webkit-animation-delay: 5s;
+  -webkit-animation-iteration-count: one;
+	color: rgb(255, 255, 255);
+	//font-size: 50px;
+	//background-color: rgb(0, 0, 76);
+	text-align:center;
+	text-shadow: rgb(204, 204, 204) 0px 1px 0px, rgb(201, 201, 201) 0px 2px 0px, rgb(187, 187, 187) 0px 3px 0px, rgb(185, 185, 185) 0px 4px 0px, rgb(170, 170, 170) 0px 5px 0px, rgba(0, 0, 0, 0.0980392) 0px 6px 1px, rgba(0, 0, 0, 0.0980392) 0px 0px 5px, rgba(0, 0, 0, 0.298039) 0px 1px 3px, rgba(0, 0, 0, 0.14902) 0px 3px 5px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.2) 0px 10px 10px, rgba(0, 0, 0, 0.0980392) 0px 20px 20px;
+	}
+</style>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal" style = "background:blue">
+      <div class="content-block">
+		<!--<div class="content-block-title">Trace route of bus</div>-->
+              <div class="list-block">
+                <ul style = "background:white">
+                  <li><a href="rn.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title" style = "color:blue">Ramanand Nagar</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="an.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner"  style = "color:blue">
+                            Anand Nagar</div>
+                      </div></a></li>
+                  <li><a href="cidco.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title"  style = "color:blue">CIDCO</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+             </div>	
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar"  style = "background:maroon; color:white;">
+          <!-- Navbar inner for Index page-->
+          <div data-page="index" class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding">SGGS</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars" ></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Index Page-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content" style = "background:#00004C; opacity: 1;">
+			<div style="background-image: url(globe.gif); height: 100%; width: 100%; border: 0px solid black;background-repeat: no-repeat;background-position: center top;">
+					  <div class="content-block-title" align = "center">
+					  <h3 id = "sggs" class="animated infinite pulse" style = "font-family: georgia, serif;color: #FFFFFF;font-variant: small-caps;text-align: center;word-spacing: 0.8pt;">
+					  <br /><div id = "sggs" class = "animated infinite flip"><img src= "img/sggs.png" id = "sggs" class="link icon-only open-panel"></div><br /><br />
+					  Shri Guru Gobind Singhji Institute<br />of<br />Engineering & Technology
+					  <!--<h5 id = "sggs" class="animated infinite pulse" style = "padding-top:0;font-family: georgia, serif;color: #FFFFFF;font-variant: small-caps;text-align: center;word-spacing: 0.8pt;">(An Autonomous Institute Owned by Govt. of Maharashtra)</h5>-->
+					  </h3>
+					  </div>
+					  <div class="content-block">
+						<h2 id = "pro" class="link icon-only open-panel"><div id = "pro" class = "animated infinite zoomInUp">SGGS Bus Tracer</div></h2>
+					  </div>
+					  
+					  </div>  <!-- globe end-->
+					  ////////
+					   <div align = "center"><a href = "bus.html"><button onClick = "home()">Trck Bus</button></a></div>
+						  <script>
+						  function home(){
+						  //alert("Home");
+						  window.location.assign("bus.html");
+						  }
+						  </script>
+						   <div align = "center"><a href = "metromap.html"><button onClick = "metro()">Metro Map</button></a></div>
+						  <script>
+						  function hmetro(){
+						  //alert("Home");
+						  window.location.assign("metromap.html");
+						  }
+						  </script>
+					  ////////
+          </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="dist/js/framework7.min.js"></script>
+	<script src="js/framework7.3dpanels.min.js"></script>
+	<script src="js/framework7.3dpanels.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script
+  </body>
+  
+</html>
